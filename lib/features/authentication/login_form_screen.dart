@@ -53,8 +53,8 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
                 Gaps.v28,
                 GestureDetector(
                   onTap: _onSubmitTap,
-                  child: const FormButton(disable: false),
-                ) // Code Challenge text:
+                  child: const FormButton(disable: false, text: "Next"),
+                )
               ],
             )),
       ),
