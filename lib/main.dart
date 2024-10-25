@@ -26,6 +26,9 @@ class TikTokApp extends StatelessWidget {
           ),
         ),
         scaffoldBackgroundColor: Colors.white,
+        bottomAppBarTheme: const BottomAppBarTheme(
+          color: Colors.white,
+        ),
         primaryColor: const Color(0xFFE9435A),
         useMaterial3: true,
       ),
