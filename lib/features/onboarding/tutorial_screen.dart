@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone_again/constants/gaps.dart';
 import 'package:tiktok_clone_again/constants/sizes.dart';
+import 'package:tiktok_clone_again/features/main_navigation/main_navigation_screen.dart';
 
 enum Direction { right, left }
 
@@ -42,6 +43,15 @@ class _TutorialScreenState extends State<TutorialScreen> {
         _showingPage = Page.first;
       });
     }
+  }
+
+  void _onEnterAppTap() {
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(
+        builder: (context) => const MainNavigationScreen(),
+      ),
+      (route) => false,
+    );
   }
 
   @override
