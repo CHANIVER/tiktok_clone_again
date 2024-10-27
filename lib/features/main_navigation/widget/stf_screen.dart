@@ -16,8 +16,15 @@ class _StfScreenState extends State<StfScreen> {
   }
 
   @override
+  void dispose() {
+    print(_clicks);
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text('$_clicks'),
         TextButton(
