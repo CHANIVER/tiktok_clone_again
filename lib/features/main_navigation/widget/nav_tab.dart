@@ -28,7 +28,7 @@ class NavTab extends StatelessWidget {
             opacity: isSelected ? 1 : 0.6,
             duration: const Duration(milliseconds: 200),
             child: Padding(
-              padding: const EdgeInsets.all(Sizes.size12),
+              padding: const EdgeInsets.all(Sizes.size8),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [

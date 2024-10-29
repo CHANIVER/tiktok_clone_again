@@ -63,7 +63,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       ),
       bottomNavigationBar: BottomAppBar(
         height: 100,
-        color: Colors.black,
+        color: const Color.fromRGBO(0, 0, 0, 1),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -80,6 +80,52 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
               icon: FontAwesomeIcons.magnifyingGlass,
               selectedIcon: FontAwesomeIcons.compass,
               onTap: () => _onTap(1),
+            ),
+            Gaps.h24,
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Positioned(
+                  right: 20,
+                  child: Container(
+                    height: 30,
+                    width: 25,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Sizes.size8,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(Sizes.size11),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 20,
+                  child: Container(
+                    height: 30,
+                    width: 25,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Sizes.size8,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(Sizes.size11),
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(1),
+                  ),
+                  height: 30,
+                  child: const Center(
+                    child: FaIcon(
+                      FontAwesomeIcons.plus,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ],
             ),
             NavTab(
               text: 'Inbox',
